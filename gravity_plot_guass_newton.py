@@ -1,10 +1,10 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-R0 = 200
+R0 = 200.0
 ro = 0.4*10**3
 G = 6.67*10**(-11)
-Z0 = 500
+Z0 = 500.0
 iterations = 5
 
 def f(x, R, Z):
@@ -64,5 +64,10 @@ with open('Gradient_output.txt','a') as f:
 
 
 plt.plot(iter,error, "-o", lw = 2)
-plt.savefig('grad_dis_{}_{}.png'.format(int(R1),int(Z1)),format='png',dpi=350)
+plt.xlabel("Intertion Number",fontsize=16)
+plt.ylabel("Error",fontsize=16)
+plt.text(2, error[0]-0.1*error[0], "Inital Guess R = {}, Z = {}".format(R1,Z1), fontsize=12)
+plt.text(2, error[0]-0.2*error[0], "Actual Value R = {}, Z = {}".format(R0,Z0), fontsize=12)
+
+plt.savefig('Gravity_guass_newton_{}_{}.png'.format(int(R1),int(Z1)),format='png',dpi=350)
 plt.show()
