@@ -8,6 +8,7 @@ $g = \frac{4\pi R^3 \Delta \rho G z }{3(x^2 + z^2)^{3/2}}$
 where z is the depth to the spherical ore body and x is the horizontal distance. G is the gravitational constant and $\rho$ is the average crust density. R is the dimention of the ore body. Here R,Z are the model parameters.
 
 Following diagram show the effectiveness of the method as it plots the error with respect to the iteration number and converges very fast for a very bad initial guess
+![Gravity_guass_newton_300_700](https://user-images.githubusercontent.com/120786270/208243216-abd19efa-9355-4cab-9a4e-81b4d8c8c4e3.png)
 
 
 ---
