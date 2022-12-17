@@ -62,12 +62,12 @@ with open('Gradient_output.txt','a') as f:
 
 
 
-
+plt.figure(figsize=(7,5))
 plt.plot(iter,error, "-o", lw = 2)
 plt.xlabel("Itertion Number",fontsize=16)
 plt.ylabel("Error",fontsize=16)
 plt.text(2, error[0]-0.1*error[0], "Inital Guess R = {}, Z = {}".format(R1,Z1), fontsize=12)
 plt.text(2, error[0]-0.2*error[0], "Actual Value R = {}, Z = {}".format(R0,Z0), fontsize=12)
-
+plt.tight_layout()
 plt.savefig('Gravity_guass_newton_{}_{}.png'.format(int(R1),int(Z1)),format='png',dpi=350)
 plt.show()
